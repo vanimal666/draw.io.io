@@ -1,81 +1,90 @@
+# Add Custom Libraries to DrawIO / diagrams.net
 
-# Add Custom Libraries to DrawIO
+This repository contains local/custom draw.io library XML files for diagrams.net.
 
-[Load a custom library from the web](https://www.drawio.com/blog/public-custom-libraries)
+## Load a custom library from the web
 
-You can load the libraries directly from Github by using the 'RAW' url.
+You can load these libraries directly from GitHub by using the raw URLs below.
 
-# RAW URLs
+## RAW URLs
 
+```text
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Battery-Lithium.xml
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Battery.xml
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Bms.xml
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Busbar.xml
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Charger.xml
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Circuit-Breaker.xml
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Combiner.xml
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Communication.xml
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Connector.xml
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Controller.xml
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Converter.xml
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Display.xml
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Distribution.xml
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Fuse.xml
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Generator.xml
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Icon.xml
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Inverter-Charger.xml
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Inverter.xml
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Isolation-Transformer.xml
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Isolator.xml
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Miscellaneous.xml
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Mppt.xml
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Sensor.xml
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Shunt.xml
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Solar-Charge-Controller.xml
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Solar.xml
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Switch.xml
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/Wire.xml
 ```
-https://raw.githubusercontent.com/gbonk/shape-library/refs/heads/main/drawio/Battery.xml
-https://raw.githubusercontent.com/gbonk/shape-library/refs/heads/main/drawio/Battery-Lithium.xml
-https://raw.githubusercontent.com/gbonk/shape-library/refs/heads/main/drawio/Bms.xml
-https://raw.githubusercontent.com/gbonk/shape-library/refs/heads/main/drawio/Busbar.xml
-https://raw.githubusercontent.com/gbonk/shape-library/refs/heads/main/drawio/Charger.xml
-https://raw.githubusercontent.com/gbonk/shape-library/refs/heads/main/drawio/Circuit-Breaker.xml
-https://raw.githubusercontent.com/gbonk/shape-library/refs/heads/main/drawio/Combiner.xml
-https://raw.githubusercontent.com/gbonk/shape-library/refs/heads/main/drawio/Communication.xml
-https://raw.githubusercontent.com/gbonk/shape-library/refs/heads/main/drawio/Connector.xml
-https://raw.githubusercontent.com/gbonk/shape-library/refs/heads/main/drawio/Controller.xml
-https://raw.githubusercontent.com/gbonk/shape-library/refs/heads/main/drawio/Converter.xml
-https://raw.githubusercontent.com/gbonk/shape-library/refs/heads/main/drawio/Display.xml
-https://raw.githubusercontent.com/gbonk/shape-library/refs/heads/main/drawio/Distribution.xml
-https://raw.githubusercontent.com/gbonk/shape-library/refs/heads/main/drawio/Fuse.xml
-https://raw.githubusercontent.com/gbonk/shape-library/refs/heads/main/drawio/Generator.xml
-https://raw.githubusercontent.com/gbonk/shape-library/refs/heads/main/drawio/Icon.xml
-https://raw.githubusercontent.com/gbonk/shape-library/refs/heads/main/drawio/Inverter-Charger.xml
-https://raw.githubusercontent.com/gbonk/shape-library/refs/heads/main/drawio/Inverter.xml
-https://raw.githubusercontent.com/gbonk/shape-library/refs/heads/main/drawio/Isolation-Transformer.xml
-https://raw.githubusercontent.com/gbonk/shape-library/refs/heads/main/drawio/Isolator.xml
-https://raw.githubusercontent.com/gbonk/shape-library/refs/heads/main/drawio/Miscellaneous.xml
-https://raw.githubusercontent.com/gbonk/shape-library/refs/heads/main/drawio/Mppt.xml
-https://raw.githubusercontent.com/gbonk/shape-library/refs/heads/main/drawio/Sensor.xml
-https://raw.githubusercontent.com/gbonk/shape-library/refs/heads/main/drawio/Shunt.xml
-https://raw.githubusercontent.com/gbonk/shape-library/refs/heads/main/drawio/Solar-Charge-Controller.xml
-https://raw.githubusercontent.com/gbonk/shape-library/refs/heads/main/drawio/Solar.xml
-https://raw.githubusercontent.com/gbonk/shape-library/refs/heads/main/drawio/Switch.xml
 
+## Add directly to DrawIO configuration
+
+The raw URLs are required to be URL-encoded and prepended with `U`.
+
+In diagrams.net / draw.io:
+
+1. Click **Extras**.
+2. Click **Configuration**.
+3. Click **Preferences**.
+4. Add these entries to the `customLibraries` array.
+
+```json
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FBattery-Lithium.xml",
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FBattery.xml",
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FBms.xml",
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FBusbar.xml",
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FCharger.xml",
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FCircuit-Breaker.xml",
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FCombiner.xml",
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FCommunication.xml",
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FConnector.xml",
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FController.xml",
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FConverter.xml",
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FDisplay.xml",
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FDistribution.xml",
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FFuse.xml",
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FGenerator.xml",
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FIcon.xml",
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FInverter-Charger.xml",
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FInverter.xml",
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FIsolation-Transformer.xml",
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FIsolator.xml",
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FMiscellaneous.xml",
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FMppt.xml",
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FSensor.xml",
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FShunt.xml",
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FSolar-Charge-Controller.xml",
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FSolar.xml",
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FSwitch.xml",
+    "Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fvanimal666%2Fdraw.io.io%2Frefs%2Fheads%2Fmain%2FWire.xml",
 ```
 
-# Add directly to DrawIO configuration
+NOTE: Some libraries are large and may take a moment to load.
 
-The raw URLs are required to be encoded and prepended with a 'U'
+## Raw base URL
 
-Click the 'Extras' menu, select 'Configuration' then the Preferences button.
-
-[Sample DrawIO Preferences](drawio.md)
-
-NOTE: May take a moment or two to load as some libraries are rather large.
-
-### DrawIO
-
-```
-"Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fgbonk%2Fshape-library%2Frefs%2Fheads%2Fmain%2Fdrawio%2FBattery.xml",
-"Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fgbonk%2Fshape-library%2Frefs%2Fheads%2Fmain%2Fdrawio%2FBattery-Lithium.xml",
-"Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fgbonk%2Fshape-library%2Frefs%2Fheads%2Fmain%2Fdrawio%2FBms.xml",
-"Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fgbonk%2Fshape-library%2Frefs%2Fheads%2Fmain%2Fdrawio%2FBusbar.xml",
-"Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fgbonk%2Fshape-library%2Frefs%2Fheads%2Fmain%2Fdrawio%2FCharger.xml",
-"Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fgbonk%2Fshape-library%2Frefs%2Fheads%2Fmain%2Fdrawio%2FCircuit-Breaker.xml",
-"Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fgbonk%2Fshape-library%2Frefs%2Fheads%2Fmain%2Fdrawio%2FCombiner.xml",
-"Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fgbonk%2Fshape-library%2Frefs%2Fheads%2Fmain%2Fdrawio%2FCommunication.xml",
-"Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fgbonk%2Fshape-library%2Frefs%2Fheads%2Fmain%2Fdrawio%2FConnector.xml",
-"Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fgbonk%2Fshape-library%2Frefs%2Fheads%2Fmain%2Fdrawio%2FController.xml",
-"Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fgbonk%2Fshape-library%2Frefs%2Fheads%2Fmain%2Fdrawio%2FConverter.xml",
-"Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fgbonk%2Fshape-library%2Frefs%2Fheads%2Fmain%2Fdrawio%2FDisplay.xml",
-"Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fgbonk%2Fshape-library%2Frefs%2Fheads%2Fmain%2Fdrawio%2FDistribution.xml",
-"Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fgbonk%2Fshape-library%2Frefs%2Fheads%2Fmain%2Fdrawio%2FFuse.xml",
-"Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fgbonk%2Fshape-library%2Frefs%2Fheads%2Fmain%2Fdrawio%2FGenerator.xml",
-"Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fgbonk%2Fshape-library%2Frefs%2Fheads%2Fmain%2Fdrawio%2FIcon.xml",
-"Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fgbonk%2Fshape-library%2Frefs%2Fheads%2Fmain%2Fdrawio%2FInverter-Charger.xml",
-"Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fgbonk%2Fshape-library%2Frefs%2Fheads%2Fmain%2Fdrawio%2FInverter.xml",
-"Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fgbonk%2Fshape-library%2Frefs%2Fheads%2Fmain%2Fdrawio%2FIsolation-Transformer.xml",
-"Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fgbonk%2Fshape-library%2Frefs%2Fheads%2Fmain%2Fdrawio%2FIsolator.xml",
-"Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fgbonk%2Fshape-library%2Frefs%2Fheads%2Fmain%2Fdrawio%2FMiscellaneous.xml",
-"Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fgbonk%2Fshape-library%2Frefs%2Fheads%2Fmain%2Fdrawio%2FMppt.xml",
-"Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fgbonk%2Fshape-library%2Frefs%2Fheads%2Fmain%2Fdrawio%2FSensor.xml",
-"Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fgbonk%2Fshape-library%2Frefs%2Fheads%2Fmain%2Fdrawio%2FShunt.xml",
-"Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fgbonk%2Fshape-library%2Frefs%2Fheads%2Fmain%2Fdrawio%2FSolar-Charge-Controller.xml",
-"Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fgbonk%2Fshape-library%2Frefs%2Fheads%2Fmain%2Fdrawio%2FSolar.xml",
-"Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fgbonk%2Fshape-library%2Frefs%2Fheads%2Fmain%2Fdrawio%2FSwitch.xml"
+```text
+https://raw.githubusercontent.com/vanimal666/draw.io.io/refs/heads/main/
 ```
